@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -21,6 +22,7 @@ class CalculatorTest {
     }
 
     @Test
+    @DisplayName("For Q1")
     void divide() {
 
         assertEquals(1, Calculator.divide(2, 2), 1.0E-15);
@@ -43,19 +45,28 @@ class CalculatorTest {
         });
 
     }
+
     @Test
     void returnNull() {
-
-        Calculator calc = new Calculator();
-        calc.returnNULL();
+        Calculator.returnNULL();
     }
 
     @Test
-    void divide_q2() {
-        Calculator calc = new Calculator();
-        calc.divide(1,1);
-
+    void divide_and_add_2_q2() {
+        Calculator.divide_and_add_2_q2(3,3);
     }
 
+//    @Test
+//    void returnNull() {
+//
+//        assertNull(Calculator.returnNULL());
+//    }
+//
+//    @Test
+//    void divide_and_add_2_q2() {
+//        assertEquals(3, Calculator.divide_and_add_2_q2(1,1));
+//    }
 
 }
+
+

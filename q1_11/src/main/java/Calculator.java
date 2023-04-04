@@ -13,9 +13,7 @@ public class Calculator {
         return DoubleStream.of(operands)
                 .reduce(1, (a, b) -> a * b);
     }
-    static Integer returnNULL() {
-        return null;
-    }
+
     static Object raise_exception() throws Exception {
         throw new Exception();
     }
@@ -30,7 +28,11 @@ public class Calculator {
         return DoubleStream.of(operands)
                 .reduce((a, b) -> a / b).getAsDouble();
     }
-    static double divide_q2(double... operands) {
-        return divide(operands);
+
+    static Double returnNULL() {
+        return null;
+    }
+    static double divide_and_add_2_q2(double... operands) {
+        return 2 + divide(operands);
     }
 }
